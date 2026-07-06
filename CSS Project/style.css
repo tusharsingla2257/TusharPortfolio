@@ -1,0 +1,15 @@
+.banner{
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    overflow: hidden;
+    position:relative;
+}
+
+.slider{
+    position:absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50%-100px);
+}

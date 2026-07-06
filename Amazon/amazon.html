@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .background {
+            background: url(bgimg.jpg);
+            height: 100vh;
+            overflow: hidden;
+            background-size: cover;
+            background-position-y: 100px;
+        }
+
+        .navbar {
+            height: 60px;
+            background-color: #0f1111;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .content {
+            margin-left: 3px;
+            display: flex;
+            justify-content: space-around;
+            color: white;
+        }
+
+        .amazonlogo-img {
+            height: 50px;
+            margin-top: 5px;
+            border: transparent;
+        }
+
+        .amazonlogo-img:hover {
+            border: 1px solid white;
+        }
+
+        .location p {
+            font-size: 13px;
+            margin-top: 8px;
+            border: transparent;
+        }
+
+        .location:hover {
+            border: 1px solid white;
+        }
+
+        .Search-bar {
+            display: flex;
+            height: 40px;
+            margin-top: 8px;
+        }
+
+        .Go {
+            border-radius: 3px;
+        }
+
+        .search-bar {
+            width: 628px;
+            border-radius: 3px;
+        }
+
+        .choose {
+            border-radius: 3px;
+        }
+
+        .lang {
+            background-color: #0f1111;
+            color: white;
+            border: transparent;
+            margin-top: 28px;
+            border: transparent;
+        }
+
+        .lang:hover {
+            border: 1px solid white;
+        }
+
+        .Account p {
+            margin-top: 15px;
+            font-size: small;
+            border: transparent;
+        }
+
+        .Account:hover {
+            border: 1px solid white;
+        }
+
+        .returns p {
+            font-size: 12px;
+            margin-top: 15px;
+            border: transparent;
+
+        }
+
+        .returns:hover {
+            border: 1px solid white;
+        }
+
+        .orders {
+            font-size: medium;
+            border: transparent;
+        }
+
+        .orders:hover {
+            border: 1px solid white;
+        }
+
+        .cart {
+            margin-top: 15px;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            border: transparent;
+        }
+
+        .cart:hover {
+            border: 1px white solid;
+        }
+
+        .other-products {
+            background-color: #232f3e;
+            height: 39px;
+            margin-top: 0px;
+            color: white;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            padding: 3px;
+        }
+
+        .All {
+            margin-left: 25px;
+            display: flex;
+            gap: 15px;
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .options {
+            display: flex;
+            gap: 20px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            margin-inline: 30px;
+        }
+
+        .card {
+            height: 370px;
+            width: 350px;
+            background-color: white;
+            margin-top: 250px;
+            overflow: hidden;
+        }
+
+        .card p {
+            font-size: large;
+            padding: 10px;
+        }
+
+        .images {
+            height: 140px;
+            width: 140px;
+            margin-left: 8px;
+        }
+
+        .pimg {
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            gap: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <div class="navbar">
+            <div class="content">
+                <div class="logo">
+                    <img src="amazonlogo.png" alt="" class="amazonlogo-img">
+                </div>
+                <div class="location">
+                    <p>Deliver to</p>
+                    <div class="State">
+                        India
+                    </div>
+                </div>
+
+                <div class="Search-bar">
+                    <select class="choose">
+                        <option>All</option>
+                    </select>
+                    <input class="search-bar" type="Search" placeholder="Search Amazon">
+
+                    <button class="Go">Go</button>
+
+                </div>
+                <div class="language">
+                    <select class="lang">
+                        <option>En</option>
+                    </select>
+                </div>
+
+                <!--My Account-->
+                <div class="Account">
+                    <p>Hello, sign in</p>
+                    <div class="Sign-in">
+                        <b>Accounts & Lists</b>
+                    </div>
+                </div>
+
+                <!-- returns & orders -->
+                <div class="returns">
+                    <p>Returns</p>
+                    <div class="orders">
+                        <b>& Orders</b>
+                    </div>
+                </div>
+
+                <!-- Cart -->
+                <div class="cart">
+                    Add to <br>
+                    cart
+                </div>
+            </div>
+        </div>
+        <div class="other-products">
+            <div class="All">
+                <p><b>All</b></p>
+                <div class="options">
+                    <div>Fresh</div>
+                    <div>MX Player</div>
+                    <div>Sell</div>
+                    <div>BestSellers</div>
+                    <div>Today's Deals</div>
+                    <div>Prime</div>
+                    <div>Mobiles</div>
+                    <div>New Releases</div>
+                    <div>Customer Service</div>
+                    <div>Amazon Pay</div>
+                    <div>Eelctronics</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- cards -->
+        <div class="cards">
+            <div class="card">
+                <p>
+                    <b>Appliances for your home | Up
+                        to 55% off</b>
+                </p>
+                <div class="pimg">
+                    <div><img src="box1.jpg" alt="" class="images"></div>
+                    <div><img src="box2.jpg" alt="" class="images"></div>
+                    <div><img src="box3.jpg" alt="" class="images"></div>
+                    <div><img src="box4.jpg" alt="" class="images"></div>
+                </div>
+            </div>
+            <div class="card">
+                <p>
+                    <b>Appliances for your home | Up
+                        to 55% off</b>
+                </p>
+                <div class="pimg">
+                    <div><img src="box1.jpg" alt="" class="images"></div>
+                    <div><img src="box2.jpg" alt="" class="images"></div>
+                    <div><img src="box3.jpg" alt="" class="images"></div>
+                    <div><img src="box4.jpg" alt="" class="images"></div>
+                </div>
+            </div>
+            <div class="card">
+                <p>
+                    <b>Appliances for your home | Up
+                        to 55% off</b>
+                </p>
+                <div class="pimg">
+                    <div><img src="box1.jpg" alt="" class="images"></div>
+                    <div><img src="box2.jpg" alt="" class="images"></div>
+                    <div><img src="box3.jpg" alt="" class="images"></div>
+                    <div><img src="box4.jpg" alt="" class="images"></div>
+                </div>
+            </div>
+            <div class="card">
+                <p>
+                    <b>Appliances for your home | Up
+                        to 55% off</b>
+                </p>
+                <div class="pimg">
+                    <div><img src="box1.jpg" alt="" class="images"></div>
+                    <div><img src="box2.jpg" alt="" class="images"></div>
+                    <div><img src="box3.jpg" alt="" class="images"></div>
+                    <div><img src="box4.jpg" alt="" class="images"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

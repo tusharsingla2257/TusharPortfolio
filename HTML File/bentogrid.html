@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .parent{
+            height: 500px;
+            width: 1200px;
+            display: grid;
+            grid-template-columns:repeat(12,calc(100%/12));
+            gap:5px;
+        }
+        .child{
+            background-color: black;
+            border-radius: 10px;
+        }
+        .col-span-4{
+            grid-column: span 4/span 4;
+        }
+        .row-span-2{
+            grid-row: span 2/span 2;
+        }
+        .col-span-2{
+            grid-column: span 2/span 2;
+        }
+        .col-span-3{
+            grid-column: span 3/span 3;
+        }
+        .background-img{
+            background: url(https://hips.hearstapps.com/hmg-prod/images/alpe-di-siusi-sunrise-with-sassolungo-or-langkofel-royalty-free-image-1623254127.jpg);
+            background-size: cover;
+            filter: saturate(0);
+            transition: all 400ms linear;
+        }
+        .background-img:hover{
+            filter: saturate(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child col-span-4"></div>
+        <div class="child col-span-4"></div>
+        <div class="child col-span-2 row-span-2"></div>
+        <div class="child col-span-2"></div>
+        <div class="child col-span-4 row-span-2 background-img"></div>
+        <div class="child col-span-3 row-span-2"></div>
+        <div class="child "></div>
+        <div class="child col-span-2"></div>
+        <div class="child col-span-3"></div>
+        <div class="child col-span-2"></div>
+    </div>
+</body>
+</html>
