@@ -53,32 +53,19 @@
 // for odd integers only
 
 // function printSum(n){
-//     let sum = 0;
-//     for(let i=1;i<=n;i++){
-//         if(i%2 != 0){
-//             sum = sum + i
-//         }
-//     }
-//     console.log(sum);
+    // let sum = 0;
+    // for(let i=1;i<=n;i++){
+    //     if(i%2 != 0){
+    //         sum = sum + i
+    //     }
+    // }
+    // console.log(sum);
 // }
-
-// printSum(100)
-
-//printing absolute value of a number
-
-// function AbsoluteValue(n){
-//     countdigits = Math.abs(n)
-//     console.log(countdigits)
-// }
-
-// AbsoluteValue(-35939)
-
-// to calculate the number of digits 
  
 // to find the number of digits in a numebr
 
 // function Digits(n){
-//     Absoluteofn = Math.abs(n)
+//     // Absoluteofn = Math.abs(n)
 //     if(n == 0){
 //         console.log(1)
 //     } 
@@ -88,32 +75,84 @@
 //     }
 // }
 
-// Digits(99999)
+// return function
 
-//to reverese the number
-
-// function ReverseNumber(n){
-//     let Absolute0fn = Math.abs(n)
-//     let reversed = 0
-//     if(Absolute0fn == 0){
-//         console.log(0)
-//     }
-
-//     let lastdigit = Absolute0fn%10
-//      reversed = (reversed*10) + lastdigit
-//     console.log(reversed) 
+// function add(a,b){
+//     return (a+b);
 // }
 
-// ReverseNumber(1091)
+// // let val = add(3,5);
+// // console.log(val);
 
-// function reverseNumber(n) {
-//     let reversed = 0;
+// console.log(add(3,5))
 
-//     for(let n=Math.floor(n/10);n>0;n++) {
-//         let digit = n % 10;
-//         reversed = reversed * 10 + digit;
+//callback function
+
+// const Sum = (n) =>{
+//      let sum = 0;
+//     for(let i=1;i<=n;i++){
+//         if(i%2 != 0){
+//             sum = sum + i
+//         }
 //     }
-// console.log(reversed)
+//     console.log(sum);
 // }
 
-// reverseNumber(1091)
+// Sum(100);
+
+// function to convert celcius to fareheit
+
+// function convert(n){
+//     let conversionformula = (n*9/5) + 32
+//     console.log(conversionformula)
+// }
+
+// convert(32)
+
+
+// function to give grades 
+
+// function Grades(n){
+//     if(n>=90){
+//         console.log("A")
+//     }
+//     else if(n<90 && n>=75){
+//         console.log("B")
+//     }
+//     else if(n<75 && n>=60){
+//         console.log("C")
+//     }
+//     else{
+//         console.log("Fail")
+//     }
+// }
+
+// Grades(65)
+
+// function Marks(n){
+//      if(n>=90){
+//          return("A")
+//     }
+//     else if(n<90 && n>=75){
+//         return("B")
+//     }
+//     else if(n<75 && n>=60){
+//         return("C")
+//     }
+//     else{
+//         return("Fail")
+//     }
+// }
+
+//to convert the celcius into fahrenheit
+
+// let Grades = Marks(98)
+// console.log(Grades)
+
+// function convert(n){
+//     return((n*9/5) + 32)
+// }
+
+// let Temperature = convert(32)
+// console.log(Temperature)
+

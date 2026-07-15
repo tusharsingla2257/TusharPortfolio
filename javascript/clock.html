@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            background-image: url(https://cdn.pixabay.com/photo/2024/02/12/16/05/siguniang-mountain-8568913_1280.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .Dateandtime {
+            margin-top: 35px;
+        }
+
+        .date {
+            display: flex;
+            justify-content: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        .time {
+            display: flex;
+            justify-content: center;
+            font-size: 60px;
+            color: rgb(239, 235, 235);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Dateandtime">
+        <div class="date">13 July</div>
+        <div class="time" id="time"></div>
+    </div>
+</body>
+<script>
+    function setime() {
+        let time = new Date()
+        console.log(time)
+        document.getElementById("time")
+            .innerText = time.toLocaleTimeString();
+    }
+    setInterval(setime , 1000)
+
+</script>
+
+</html>

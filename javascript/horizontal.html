@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sidebar</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .Sidebar {
+            height: 100px;
+            width: 100%;
+            background: black;
+            transform: translateY(-100px);
+            transition: 0.3s ease;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="Sidebar" id="Sidebar"></div>
+        <button onclick="openSidebar()">Chacha! Vaste Gana Huiya</button>
+    </nav>
+
+    <script>
+
+        let Sidebaropen = false;
+
+        function openSidebar() {
+
+            if (Sidebaropen == false) {
+
+                document.getElementById("Sidebar").style.transform = "translateY(0px)";
+                Sidebaropen = true;
+
+            }
+            else {
+
+                document.getElementById("Sidebar").style.transform = "translateY(-100px)";
+                Sidebaropen = false;
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

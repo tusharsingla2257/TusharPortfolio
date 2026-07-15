@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-image: url(https://images.openai.com/static-rsc-4/ESsOk4503W2c4ES3JddLdfSpYDP5OJWQmdDS6MT-mxrfnvvCgNydPtR_NTOmDDkyIF5HtGn_dXuWFv_ARWTk_X2sXSzqcfmv3UZwSNe9lUT3KiXee7PhF8RtVhDtOlmsYjwLsE1v7mVgw2dbIhjsKyLV6zjtgXPMML2l1V0_osPxpKFgZNZrFx9uGLeMC-Cn?purpose=fullsize);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            padding: 20px;
+            height: 20px;
+            background-color: rgba(149, 149, 191, 0.125);
+            border-radius: 30px;
+            width: 800px;
+        }
+
+        .location {
+            display: flex;
+            font-size: large;
+        }
+
+        .City {
+            font-size: larger;
+        }
+
+        .sidebar button {
+            all: unset;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 20px;
+            color: rgb(30, 22, 22);
+            transition: 200ms ease;
+        }
+
+        .sidebar button:hover {
+            color: white;
+        }
+
+        .searchbox button {
+            all: unset;
+            cursor: pointer;
+            font-size: 18px;
+            color: rgb(30, 22, 22);
+            transition: 200ms ease;
+        }
+
+        .searchbox button:hover {
+            color: white;
+        }
+
+        .city button {
+            all: unset;
+            cursor: pointer;
+            color: rgb(30, 22, 22);
+            transition: 200ms ease;
+        }
+
+        .city button:hover {
+            color: white;
+        }
+
+        .state button {
+            all: unset;
+            cursor: pointer;
+            color: rgb(30, 22, 22);
+            transition: 200ms ease;
+        }
+
+        .state button:hover {
+            color: white;
+        }
+
+        .hero-section {
+            display: flex;
+            justify-content: space-between;
+            margin-inline: 80px;
+            margin-top: 20px;
+        }
+
+        .greeting {
+            font-size: 20px;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+        .Date {
+            font-size: 15px;
+            font-family: Arial, sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .weather-details {
+            display: grid;
+            height: 60px;
+            width: 160px;
+            gap: 10px;
+            margin-right: 8px;
+        }
+
+        .box {
+            height: 65px;
+            width: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(11, 12, 12);
+            background: rgba(149, 149, 191, 0.12);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            transition: all 300ms ease-in-out;
+        }
+
+        .box:hover {
+            scale: 1.08;
+        }
+
+        .forecast{
+            display: flex;
+            margin-top: 40px;
+        }
+
+        .forecast-graph {
+            height: 300px;
+            width: 300px;
+            background: rgba(149, 149, 191, 0.12);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+
+        .seven-day-forecast {
+            height: 300px;
+            width: 900px;
+            background: rgba(149, 149, 191, 0.12);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            margin-top: 20px;
+            margin-left: 40px;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 4px;
+            margin-top: 100px;
+        }
+
+        .box-1 {
+            background: rgba(149, 149, 191, 0.12);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            height: 200px;
+            margin-top: 50px;
+            margin-inline: 10px;
+            text-align: center;
+            transition: all 300ms ease-in-out;
+        }
+
+        .box-1:hover {
+            scale: 1.08;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="location">
+                <div class="sidebar"><button id="sidebar">
+                        <i class="fa-solid fa-bars"></i>
+                    </button></div>
+                <div class="city" style="margin-left: 10px;"><button id="sidebar">City,</button></div>
+                <div class="state" style="margin-left: 4px;"><button id="sidebar">State</button></div>
+            </div>
+            <div class="searchbox">
+                <button id="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero-section">
+        <div class="date">
+            <div class="greeting" id="greeting"></div>
+            <div class="Date" id="Date"></div>
+        </div>
+        <div class="temperature" id="temp"></div>
+        <div class="weather-details">
+            <div class="box">Humidity</div>
+            <div class="box">Pressure</div>
+            <div class="box">Wind</div>
+            <div class="box">Visibility</div>
+        </div>
+    </div>
+
+    <div class="forecast">
+        <div class="forecast-graph"></div>
+        <div class="seven-day-forecast">
+            <div class="box-1"></div>
+            <div class="box-1"></div>
+            <div class="box-1"></div>
+            <div class="box-1"></div>
+            <div class="box-1"></div>
+            <div class="box-1"></div>
+            <div class="box-1"></div>
+        </div>
+    </div>
+</body>
+<script src="w2.js">
+</script>
+
+</html>
