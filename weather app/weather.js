@@ -46,4 +46,12 @@ function updateGreeting() {
     form.addEventListener("submit" , (e) => {
         e.preventDefault();
         getWeatherData();
+<<<<<<< HEAD
     });
+=======
+    });
+
+    // to open searchbox
+
+    let 
+>>>>>>> 62381d1 (responsive design)

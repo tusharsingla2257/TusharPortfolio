@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -253,10 +254,417 @@
             <div class="box"></div>
             <div class="box"></div>
         </div>
+=======
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      /* body {
+            background-color: rgb(212, 238, 229);
+            height: 100vh;
+        } */
+
+      body {
+        background: rgb(212, 238, 229);
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      /* nav {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        font-size: 22px;
+        padding: 20px;
+      } */
+
+      nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: clamp(15px, 4vw, 60px);
+        padding: 20px;
+        font-size: clamp(16px, 2vw, 22px);
+      }
+
+      nav a {
+        text-decoration: none;
+        color: black;
+      }
+
+      /* .text {
+        text-align: center;
+        font-size: 25px;
+        margin-top: 40px;
+      } */
+
+      .text {
+        text-align: center;
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+
+      .text h1 {
+        font-size: clamp(2rem, 5vw, 4rem);
+        line-height: 1.2;
+      }
+
+      .sub-text {
+        font-size: clamp(1rem, 2vw, 1.3rem);
+      }
+
+      /* .sub-text {
+        color: rgb(49, 45, 45);
+        margin-top: 10px;
+      } */
+
+      /* Hover Box  */
+
+      .hover-box {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 20px;
+      }
+
+      .box {
+        width: clamp(60px, 10vw, 100px);
+        height: clamp(100px, 15vw, 150px);
+        background-color: rgb(212, 238, 229);
+        border: 1px solid rgb(230, 232, 236);
+        border-radius: 10px;
+        transform: skew(-30deg);
+
+        animation: autohover 2s infinite;
+      }
+
+      @keyframes autohover {
+        from {
+          transform: skew(-30deg) scale(1);
+          background-color: rgb(212, 238, 229);
+        }
+
+        50% {
+          transform: skew(-30deg) scale(1.1);
+          background-color: rgb(106, 238, 155);
+        }
+      }
+
+      .box:nth-child(1) {
+        animation-delay: 0s;
+      }
+
+      .box:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+
+      .box:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+
+      .box:nth-child(4) {
+        animation-delay: 0.6s;
+      }
+
+      .box:nth-child(5) {
+        animation-delay: 0.8s;
+      }
+
+      .box:nth-child(6) {
+        animation-delay: 1s;
+      }
+
+      /* Companies I have Worked With */
+      .container {
+        height: 350px;
+        perspective: 1200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .carousel-3D {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        transform-style: preserve-3d;
+        animation: rotation 15s linear infinite;
+      }
+
+      @keyframes rotation {
+        from {
+          transform: rotateY(0deg);
+        }
+
+        to {
+          transform: rotateY(360deg);
+        }
+      }
+
+      .entity {
+        width: clamp(40px, 6vw, 60px);
+        height: clamp(40px, 6vw, 60px);
+      }
+
+      .entity:nth-child(1) {
+        transform: rotateY(0deg) translateZ(350px);
+      }
+
+      .entity:nth-child(2) {
+        transform: rotateY(36deg) translateZ(350px);
+      }
+
+      .entity:nth-child(3) {
+        transform: rotateY(72deg) translateZ(350px);
+      }
+
+      .entity:nth-child(4) {
+        transform: rotateY(108deg) translateZ(350px);
+      }
+
+      .entity:nth-child(5) {
+        transform: rotateY(144deg) translateZ(350px);
+      }
+
+      .entity:nth-child(6) {
+        transform: rotateY(180deg) translateZ(350px);
+      }
+
+      .entity:nth-child(7) {
+        transform: rotateY(216deg) translateZ(350px);
+      }
+
+      .entity:nth-child(8) {
+        transform: rotateY(252deg) translateZ(350px);
+      }
+
+      .entity img {
+        height: 100%;
+        width: 100%;
+      }
+
+      .com-text {
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
+        margin-top: 40px;
+      }
+
+      /* Our Works */
+      .carousel {
+        /* border:5px solid black; */
+        margin-top: 80px;
+        overflow: hidden;
+        display: flex;
+        gap: 20px;
+        padding: 20px 0;
+      }
+
+      .carousel::-webkit-scrollbar {
+        display: none;
+      }
+
+      @keyframes slide {
+        from {
+          translate: 0;
+        }
+
+        to {
+          translate: -100%;
+        }
+      }
+
+      .carousel:hover .group {
+        animation-play-state: paused;
+        cursor: pointer;
+      }
+
+      .group {
+        display: flex;
+        animation: slide 15s infinite linear;
+        gap: 20px;
+      }
+
+      .group img {
+        height: 100%;
+        width: 100%;
+      }
+
+      .item {
+        width: clamp(220px, 28vw, 320px);
+        aspect-ratio: 1;
+        flex-shrink: 0;
+      }
+
+      .item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+
+      /* Tablets */
+
+      @media (max-width: 992px) {
+        .entity:nth-child(1) {
+          transform: rotateY(0deg) translateZ(220px);
+        }
+        .entity:nth-child(2) {
+          transform: rotateY(45deg) translateZ(220px);
+        }
+        .entity:nth-child(3) {
+          transform: rotateY(90deg) translateZ(220px);
+        }
+        .entity:nth-child(4) {
+          transform: rotateY(135deg) translateZ(220px);
+        }
+        .entity:nth-child(5) {
+          transform: rotateY(180deg) translateZ(220px);
+        }
+        .entity:nth-child(6) {
+          transform: rotateY(225deg) translateZ(220px);
+        }
+        .entity:nth-child(7) {
+          transform: rotateY(270deg) translateZ(220px);
+        }
+        .entity:nth-child(8) {
+          transform: rotateY(315deg) translateZ(220px);
+        }
+      }
+
+      /* Phones */
+
+      @media (max-width: 768px) {
+        nav {
+          gap: 20px;
+        }
+
+        .hover-box {
+          gap: 10px;
+        }
+
+        .box {
+          width: 60px;
+          height: 90px;
+        }
+
+        .container {
+          height: 260px;
+        }
+
+        .carousel-3D {
+          width: 180px;
+          height: 180px;
+        }
+
+        .entity:nth-child(1) {
+          transform: rotateY(0deg) translateZ(140px);
+        }
+        .entity:nth-child(2) {
+          transform: rotateY(45deg) translateZ(140px);
+        }
+        .entity:nth-child(3) {
+          transform: rotateY(90deg) translateZ(140px);
+        }
+        .entity:nth-child(4) {
+          transform: rotateY(135deg) translateZ(140px);
+        }
+        .entity:nth-child(5) {
+          transform: rotateY(180deg) translateZ(140px);
+        }
+        .entity:nth-child(6) {
+          transform: rotateY(225deg) translateZ(140px);
+        }
+        .entity:nth-child(7) {
+          transform: rotateY(270deg) translateZ(140px);
+        }
+        .entity:nth-child(8) {
+          transform: rotateY(315deg) translateZ(140px);
+        }
+
+        .carousel {
+          margin-top: 40px;
+        }
+
+        .item {
+          width: 220px;
+        }
+      }
+
+      /* Small Phones */
+
+      @media (max-width: 480px) {
+        nav {
+          flex-direction: column;
+        }
+
+        .hover-box {
+          justify-content: center;
+        }
+
+        .text {
+          margin-top: 20px;
+        }
+
+        .sub-text br {
+          display: none;
+        }
+
+        .com-text {
+          text-align: center;
+          padding: 0 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <a href="">Home</a>
+      <a href="">Work</a>
+      <a href="">Contact Us</a>
+    </nav>
+
+    <div class="body-content">
+      <div class="text">
+        <h1>
+          Design Engineer optimising the <br />
+          Product Life Cycle and reducing
+        </h1>
+
+        <div class="sub-text">
+          Passionate about bridging the gap between innovative <br />
+          mechanical design and cost-effective production.
+        </div>
+      </div>
+
+      <!-- Hover Box -->
+      <div class="hover-box">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+>>>>>>> 62381d1 (responsive design)
     </div>
 
     <!-- Companies I have Worked With -->
     <div class="companies">
+<<<<<<< HEAD
         <div class="com-text">
             Companies I have Worked with!
         </div>
@@ -272,10 +680,28 @@
                 <div class="entity"><img src="asus.png" alt=""></div>
             </div>
         </div>
+=======
+      <div class="com-text">Companies I have Worked with!</div>
+      <div class="container">
+        <div class="carousel-3D">
+          <div class="entity">
+            <img src="google.jpg" alt="" class="google" />
+          </div>
+          <div class="entity"><img src="amazon.png" alt="" /></div>
+          <div class="entity"><img src="apple.png" alt="" /></div>
+          <div class="entity"><img src="meta.png" alt="" /></div>
+          <div class="entity"><img src="netflix.jpg" alt="" /></div>
+          <div class="entity"><img src="nvidia.jpg" alt="" /></div>
+          <div class="entity"><img src="adobe.png" alt="" /></div>
+          <div class="entity"><img src="asus.png" alt="" /></div>
+        </div>
+      </div>
+>>>>>>> 62381d1 (responsive design)
     </div>
 
     <!-- our Work -->
     <div class="carousel">
+<<<<<<< HEAD
         <div class="group">
             <div class="item"><a href="https://www.themarqeditorials.com/"><img
                         src="https://genvwebsters.com/_next/image?url=%2Fprojects%2Fmarqeditorials.png&w=1920&q=75"
@@ -334,3 +760,119 @@
 </body>
 
 </html>
+=======
+      <div class="group">
+        <div class="item">
+          <a href="https://www.themarqeditorials.com/"
+            ><img
+              src="https://genvwebsters.com/_next/image?url=%2Fprojects%2Fmarqeditorials.png&w=1920&q=75"
+              alt=""
+          /></a>
+        </div>
+        <div class="item">
+          <a href="https://www.emkayoverseas.com/"
+            ><img
+              src="https://genvwebsters.com/_next/image?url=%2Fprojects%2Femkay.png&w=1920&q=75"
+              alt=""
+          /></a>
+        </div>
+        <div class="item">
+          <a href="https://www.visaclub.in/"
+            ><img
+              src="https://genvwebsters.com/_next/image?url=%2Fprojects%2Fvisaclub.png&w=1920&q=75"
+              alt=""
+          /></a>
+        </div>
+        <div class="item">
+          <a
+            href="https://genvwebsters.com/_next/image?url=%2Fprojects%2Fvisaclub.png&w=1920&q=75"
+            ><img
+              src="https://genvwebsters.com/_next/image?url=%2Fprojects%2Fasimmigrations.png&w=1920&q=75"
+              alt=""
+          /></a>
+        </div>
+        <div class="item">
+          <a
+            href="https://genvwebsters.com/_next/image?url=%2Fprojects%2Fasimmigrations.png&w=1920&q=75"
+            ><img
+              src="https://genvwebsters.com/_next/image?url=%2Fprojects%2Fcoldforge.png&w=1920&q=75"
+              alt=""
+          /></a>
+        </div>
+        <div class="item">
+          <a
+            href="https://genvwebsters.com/_next/image?url=%2Fprojects%2Fcoldforge.png&w=1920&q=75"
+            ><img
+              src="https://genvwebsters.com/_next/image?url=%2Fprojects%2Fsgi.png&w=1920&q=75"
+              alt=""
+          /></a>
+        </div>
+        <div class="item">
+          <a
+            href="https://genvwebsters.com/_next/image?url=%2Fprojects%2Fsgi.png&w=1920&q=75"
+            ><img
+              src="https://genvwebsters.com/_next/image?url=%2Fprojects%2Fsgi.png&w=1920&q=75"
+              alt=""
+          /></a>
+        </div>
+      </div>
+
+      <div aria-hidden class="group">
+        <div class="item">
+          <a href="https://www.themarqeditorials.com/"
+            ><img
+              src="https://genvwebsters.com/_next/image?url=%2Fprojects%2Fmarqeditorials.png&w=1920&q=75"
+              alt=""
+          /></a>
+        </div>
+        <div class="item">
+          <a href="https://www.emkayoverseas.com/"
+            ><img
+              src="https://genvwebsters.com/_next/image?url=%2Fprojects%2Femkay.png&w=1920&q=75"
+              alt=""
+          /></a>
+        </div>
+        <div class="item">
+          <a href="https://www.visaclub.in/"
+            ><img
+              src="https://genvwebsters.com/_next/image?url=%2Fprojects%2Fvisaclub.png&w=1920&q=75"
+              alt=""
+          /></a>
+        </div>
+        <div class="item">
+          <a
+            href="https://genvwebsters.com/_next/image?url=%2Fprojects%2Fvisaclub.png&w=1920&q=75"
+            ><img
+              src="https://genvwebsters.com/_next/image?url=%2Fprojects%2Fasimmigrations.png&w=1920&q=75"
+              alt=""
+          /></a>
+        </div>
+        <div class="item">
+          <a
+            href="https://genvwebsters.com/_next/image?url=%2Fprojects%2Fasimmigrations.png&w=1920&q=75"
+            ><img
+              src="https://genvwebsters.com/_next/image?url=%2Fprojects%2Fcoldforge.png&w=1920&q=75"
+              alt=""
+          /></a>
+        </div>
+        <div class="item">
+          <a
+            href="https://genvwebsters.com/_next/image?url=%2Fprojects%2Fcoldforge.png&w=1920&q=75"
+            ><img
+              src="https://genvwebsters.com/_next/image?url=%2Fprojects%2Fsgi.png&w=1920&q=75"
+              alt=""
+          /></a>
+        </div>
+        <div class="item">
+          <a
+            href="https://genvwebsters.com/_next/image?url=%2Fprojects%2Fsgi.png&w=1920&q=75"
+            ><img
+              src="https://genvwebsters.com/_next/image?url=%2Fprojects%2Fsgi.png&w=1920&q=75"
+              alt=""
+          /></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+>>>>>>> 62381d1 (responsive design)
